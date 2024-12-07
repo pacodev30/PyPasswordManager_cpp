@@ -12,6 +12,7 @@ add_executable(
     Entry.cpp
     Manager.h
     Manager.cpp
+    FileUtils.h
 )
 
 include(GNUInstallDirs)

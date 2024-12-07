@@ -11,16 +11,14 @@ Manager::~Manager() {
 }
 
 // CREATE
-void Manager::addEntry(const std::string& site, const std::string& username, const std::string& password)
-{
+void Manager::addEntry(const std::string& site, const std::string& username, const std::string& password) {
     _entries.push_back(Entry(site, username, password));
     std::cout << "\n-> Entry added successfully! :) \n";
     saveToFile();
 }
 
 // READ
-void Manager::readEntries() const
-{
+void Manager::readEntries() const {
     if (!_entries.empty()) {
         std::cout << "\nStored Password Entries: \n";
         for (const auto& entry : _entries) {
@@ -33,8 +31,7 @@ void Manager::readEntries() const
 }
 
 // UPDATE
-void Manager::updatePassword(const std::string& site, const std::string& newPassword)
-{
+void Manager::updatePassword(const std::string& site, const std::string& newPassword) {
     for (auto& entry : _entries) {
         if (entry.getSite() == site) {
             entry.setPassword(newPassword);
@@ -78,8 +75,7 @@ void Manager::loadFromFile() {
 }
 
 // SAVE
-void Manager::saveToFile() const
-{
+void Manager::saveToFile() const {
     std::ofstream file(filename);
     if (file.is_open()) {
         for (const auto& entry : _entries) {

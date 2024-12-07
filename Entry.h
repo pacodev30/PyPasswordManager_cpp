@@ -3,7 +3,8 @@
 
 namespace mpm
 {
-class Entry {
+class Entry
+{
 public:
     Entry(const std::string& site, const std::string& username, const std::string& password);
 

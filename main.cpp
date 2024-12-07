@@ -19,18 +19,18 @@ int main()
         switch (choice) {
         case 1: {
             std::string site, username, password;
-            std::cout << "Enter site: ";
+            std::cout << "Enter site : ";
             std::cin >> site;
-            std::cout << "Enter username: ";
+            std::cout << "Enter username : ";
             std::cin >> username;
-            std::cout << "Enter password: ";
+            std::cout << "Enter password : ";
             std::cin >> password;
             manager.addEntry(site, username, password);
             break;
         }
         case 2: {
             std::string site;
-            std::cout << "Enter site to remove: ";
+            std::cout << "Enter site to remove : ";
             std::cin >> site;
             manager.deleteEntry(site);
             break;
@@ -39,7 +39,7 @@ int main()
             std::string site, newPassword;
             std::cout << "Enter site to update password: ";
             std::cin >> site;
-            std::cout << "Enter new password: ";
+            std::cout << "Enter new password : ";
             std::cin >> newPassword;
             manager.updatePassword(site, newPassword);
             break;
@@ -48,10 +48,10 @@ int main()
             manager.readEntries();
             break;
         case 5:
-            std::cout << "Exiting Password Manager. Goodbye! ;)\n";
+            std::cout << "Exiting Password Manager. Goodbye! ;) \n";
             break;
         default:
-            std::cout << "Invalid choice. Please try again. :(\n";
+            std::cout << "Invalid choice. Please try again. :( \n";
         }
 
     } while (choice != 5);

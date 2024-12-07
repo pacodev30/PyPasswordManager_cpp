@@ -3,8 +3,8 @@
 using namespace mpm;
 
 Entry::Entry(const std::string& site, const std::string& username, const std::string& password)
-    : _site(site), _username(username), _password(password) {
-}
+    : _site(site), _username(username), _password(password)
+{ }
 
 std::string Entry::getSite() const {
     return _site;

@@ -15,7 +15,11 @@ public:
     void setPassword(const std::string& newPassword);
 
     std::string serialize() const;
+<<<<<<< Updated upstream:Entry.h
     static Entry deserialize(const std::string& line);
+=======
+    static PasswordEntry deserialize( std::string& line);
+>>>>>>> Stashed changes:PasswordEntry.h
 
 private:
     std::string _site;
